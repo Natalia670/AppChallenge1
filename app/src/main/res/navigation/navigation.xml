@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/songsFragment">
+
+    <fragment
+        android:id="@+id/songsFragment"
+        android:name="com.example.a1stpartialchallenge_natalia.SongsFragment"
+        android:label="fragment_songs"
+        tools:layout="@layout/fragment_songs" >
+        <action
+            android:id="@+id/action_songsFragment_to_songFragment"
+            app:destination="@id/songFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/songFragment"
+        android:name="com.example.a1stpartialchallenge_natalia.SongFragment"
+        android:label="fragment_song"
+        tools:layout="@layout/fragment_song" >
+        <argument
+            android:name="song"
+            app:argType="com.example.a1stpartialchallenge_natalia.Song" />
+    </fragment>
+</navigation>
